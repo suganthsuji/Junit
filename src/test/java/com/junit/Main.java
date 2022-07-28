@@ -29,5 +29,11 @@ public class Main {
         Assert.assertEquals(true,result);
 
     }
+    @Test
+    public void givenNumberString_WhenValidated_ReturnBoolean(){
 
+        Boolean result=validation.numberValidation("8072948266");
+        Assert.assertEquals(true,result);
+
+    }
 }
