@@ -14,14 +14,18 @@ public class ParameterizedJUnit {
     public String email;
     public boolean expectedResult;
 
+    //Creating Constructors
 
     public ParameterizedJUnit(String email, boolean expectedResult) {
         this.email = email;
         this.expectedResult = expectedResult;
     }
 
+    //Multiple Email Validation
     @Parameterized.Parameters
     public static Collection valueWithExpectedResult() {
+
+        //Checking validations for the email
 
         return Arrays.asList((new Object[][]{
                 {"abc@yahoo.com",true},
@@ -37,6 +41,7 @@ public class ParameterizedJUnit {
 
     }
 
+    //Test Method for Multiple Validation
     @Test
     public void givenString_WhenValidated_ReturnBoolean(){
         MainTest obj=new MainTest();
