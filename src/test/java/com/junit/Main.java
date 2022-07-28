@@ -22,4 +22,12 @@ public class Main {
             Assert.assertEquals(true,result);
 
     }
+    @Test
+    public void givenEmailString_WhenValidated_ReturnBoolean(){
+
+        Boolean result=validation.emailValidation("suganth.pv@bizongo.com");
+        Assert.assertEquals(true,result);
+
+    }
+
 }
